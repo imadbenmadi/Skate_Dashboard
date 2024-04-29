@@ -25,7 +25,7 @@ function Edit_Course() {
         setLoading(true);
         try {
             const response = await axios.get(
-                `http://localhost:3000/Courses/${Course_id}`,
+                `https://backend.skate.dz/Courses/${Course_id}`,
                 {
                     withCredentials: true,
                     validateStatus: () => true,
@@ -97,7 +97,7 @@ function Edit_Course() {
                             Price: Course.Price || "",
                             Category: Course.Category || "",
                             image:
-                                `http://localhost:3000/Courses/${Course.Image}` ||
+                                `https://backend.skate.dz/Courses/${Course.Image}` ||
                                 null,
                         }}
                         validate={(values) => {
@@ -138,7 +138,7 @@ function Edit_Course() {
                                 formData.append("Category", values.Category);
                                 formData.append("image", values.image);
                                 let response = await Axios.put(
-                                    `http://localhost:3000/Dashboard/Courses/${Course_id}`,
+                                    `https://backend.skate.dz/Dashboard/Courses/${Course_id}`,
                                     formData,
                                     {
                                         withCredentials: true,

@@ -83,7 +83,7 @@ function Laptop_NavBar({ Active_nav, setActive_nav }) {
                     <IoIosPaper />
                     <div>Blogs</div>
                 </Link>
-                <div
+                {/* <div
                     className={` flex items-center gap-3 cursor-pointer text-xl pt-6 `}
                     onClick={() => {
                         swal.fire({
@@ -103,7 +103,7 @@ function Laptop_NavBar({ Active_nav, setActive_nav }) {
                 >
                     <TbWorld />
                     <div>Go to the Website</div>
-                </div>
+                </div> */}
             </div>
         </div>
     );

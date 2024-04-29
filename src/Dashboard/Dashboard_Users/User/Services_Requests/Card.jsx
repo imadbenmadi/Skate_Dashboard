@@ -11,7 +11,7 @@ function Card({ request, onDelete }) {
         try {
             setAccept_Loading(true);
             const response = await axios.post(
-                "http://localhost:3000/Dashboard/Services/Requests/Accept",
+                "https://backend.skate.dz/Dashboard/Services/Requests/Accept",
                 { UserId, ServiceId },
                 {
                     withCredentials: true,
@@ -73,7 +73,7 @@ function Card({ request, onDelete }) {
         try {
             setReject_Loading(true);
             const response = await axios.post(
-                "http://localhost:3000/Dashboard/Services/Requests/Reject",
+                "https://backend.skate.dz/Dashboard/Services/Requests/Reject",
                 { UserId, ServiceId },
                 {
                     withCredentials: true,

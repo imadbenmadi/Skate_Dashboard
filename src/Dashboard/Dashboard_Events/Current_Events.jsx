@@ -14,10 +14,13 @@ function Current_Events() {
     const fetch_Events = async () => {
         setLoading(true);
         try {
-            const response = await axios.get("http://localhost:3000/events", {
-                withCredentials: true,
-                validateStatus: () => true,
-            });
+            const response = await axios.get(
+                "https://backend.skate.dz/events",
+                {
+                    withCredentials: true,
+                    validateStatus: () => true,
+                }
+            );
             if (response.status == 200) {
                 setEvents(response.data.events);
             } else {

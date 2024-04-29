@@ -15,7 +15,7 @@ function Current_Courses_Card({ item, onDelete }) {
     async function handle_delete_Course(course) {
         try {
             const response = await axios.delete(
-                `http://localhost:3000/Dashboard/Courses/${course._id}`,
+                `https://backend.skate.dz/Dashboard/Courses/${course._id}`,
                 {
                     withCredentials: true,
                     validateStatus: () => true,
@@ -65,7 +65,7 @@ function Current_Courses_Card({ item, onDelete }) {
                 <div className="relative overflow-hidden pt-5 px-5 flex flex-col md:flex-row shrink-0 justify-start h-fit">
                     <img
                         className="md:w-[30%] md:h-[200px] object-cover"
-                        src={`http://localhost:3000/Courses/${item.Image}`}
+                        src={`https://backend.skate.dz/Courses/${item.Image}`}
                         alt={item.Title}
                     />
                     <div className="md:w-[70%] md:pl-6 py-4 break-words flex justify-between">

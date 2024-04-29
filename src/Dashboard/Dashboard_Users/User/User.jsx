@@ -1,4 +1,3 @@
-
 import { Outlet } from "react-router";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router";
@@ -21,7 +20,7 @@ function User() {
 
         try {
             const response = await axios.get(
-                `http://localhost:3000/Dashboard/Users/${userId}`,
+                `https://backend.skate.dz/Dashboard/Users/${userId}`,
                 {
                     withCredentials: true,
                     validateStatus: () => true,
@@ -51,7 +50,7 @@ function User() {
         <Outlet context={[user, setUser]} />
     );
 
-    // const [user, setUser] = useState(null);  
+    // const [user, setUser] = useState(null);
 }
 
 export default User;

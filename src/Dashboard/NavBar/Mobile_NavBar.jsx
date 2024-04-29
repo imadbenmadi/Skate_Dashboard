@@ -162,7 +162,7 @@ function Navbar({ Active_nav, setActive_nav, openNav, SetOpenNav, userId }) {
                         <IoIosPaper />
                     </Link>
 
-                    <div
+                    {/* <div
                         className={` flex items-center gap-3 cursor-pointer text-xl pt-4 text-white  `}
                         onClick={() => {
                             swal.fire({
@@ -181,7 +181,7 @@ function Navbar({ Active_nav, setActive_nav, openNav, SetOpenNav, userId }) {
                         }}
                     >
                         <TbWorld />
-                    </div>
+                    </div> */}
                 </div>
             )}
         </div>

@@ -25,7 +25,7 @@ function Edit_Blog() {
         setLoading(true);
         try {
             const response = await axios.get(
-                `http://localhost:3000/Blogs/${Blog_id}`,
+                `https://backend.skate.dz/Blogs/${Blog_id}`,
                 {
                     withCredentials: true,
                     validateStatus: () => true,
@@ -95,7 +95,7 @@ function Edit_Blog() {
                             Text: Blog.Text || "",
                             Description: Blog.Description || "",
                             image:
-                                `http://localhost:3000/Blogs/${Blog.Image}` ||
+                                `https://backend.skate.dz/Blogs/${Blog.Image}` ||
                                 null,
                         }}
                         validate={(values) => {
@@ -126,7 +126,7 @@ function Edit_Blog() {
                                 );
                                 formData.append("image", values.image);
                                 let response = await Axios.put(
-                                    `http://localhost:3000/Dashboard/Blogs/${Blog_id}`,
+                                    `https://backend.skate.dz/Dashboard/Blogs/${Blog_id}`,
                                     formData,
                                     {
                                         withCredentials: true,

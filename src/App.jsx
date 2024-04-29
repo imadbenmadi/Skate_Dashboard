@@ -12,7 +12,7 @@ function App() {
     //     setLoading(true);
     //     try {
     //         const response = await axios.get(
-    //             "http://localhost:3000/Dashboard/check_Auth",
+    //             "https://backend.skate.dz/Dashboard/check_Auth",
     //             {
     //                 withCredentials: true,
     //                 validateStatus: () => true,
@@ -35,9 +35,7 @@ function App() {
         navigate("/Dashboard");
     }, []);
 
-    return (
-       null
-    );
+    return null;
 }
 
 export default App;

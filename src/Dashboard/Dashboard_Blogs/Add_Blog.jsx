@@ -59,7 +59,7 @@ function Add_Blog() {
                             formData.append("Description", values.Description);
                             formData.append("image", values.image);
                             let response = await Axios.post(
-                                "http://localhost:3000/Dashboard/Blogs",
+                                "https://backend.skate.dz/Dashboard/Blogs",
                                 formData,
                                 {
                                     withCredentials: true,

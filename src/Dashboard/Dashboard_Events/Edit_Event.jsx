@@ -25,7 +25,7 @@ function Edit_Event() {
         setLoading(true);
         try {
             const response = await axios.get(
-                `http://localhost:3000/Events/${Event_id}`,
+                `https://backend.skate.dz/Events/${Event_id}`,
                 {
                     withCredentials: true,
                     validateStatus: () => true,
@@ -95,7 +95,7 @@ function Edit_Event() {
                             Text: Event.Text || "",
                             Description: Event.Description || "",
                             image:
-                                `http://localhost:3000/Events/${Event.Image}` ||
+                                `https://backend.skate.dz/Events/${Event.Image}` ||
                                 null,
                         }}
                         validate={(values) => {
@@ -126,7 +126,7 @@ function Edit_Event() {
                                 );
                                 formData.append("image", values.image);
                                 let response = await Axios.put(
-                                    `http://localhost:3000/Dashboard/Events/${Event_id}`,
+                                    `https://backend.skate.dz/Dashboard/Events/${Event_id}`,
                                     formData,
                                     {
                                         withCredentials: true,

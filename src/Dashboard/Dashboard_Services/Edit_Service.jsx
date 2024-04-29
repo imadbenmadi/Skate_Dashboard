@@ -25,7 +25,7 @@ function Edit_Service() {
         setLoading(true);
         try {
             const response = await axios.get(
-                `http://localhost:3000/Services/${Service_id}`,
+                `https://backend.skate.dz/Services/${Service_id}`,
                 {
                     withCredentials: true,
                     validateStatus: () => true,
@@ -97,7 +97,7 @@ function Edit_Service() {
                             Price: Service.Price || "",
                             Category: Service.Category || "",
                             image:
-                                `http://localhost:3000/Services/${Service.Image}` ||
+                                `https://backend.skate.dz/Services/${Service.Image}` ||
                                 null,
                         }}
                         validate={(values) => {
@@ -137,7 +137,7 @@ function Edit_Service() {
                                 );
                                 formData.append("image", values.image);
                                 let response = await Axios.put(
-                                    `http://localhost:3000/Dashboard/Services/${Service_id}`,
+                                    `https://backend.skate.dz/Dashboard/Services/${Service_id}`,
                                     formData,
                                     {
                                         withCredentials: true,

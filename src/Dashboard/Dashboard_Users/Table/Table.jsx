@@ -20,7 +20,7 @@ function Table() {
 
         try {
             const response = await axios.get(
-                "http://localhost:3000/Dashboard/Users",
+                "https://backend.skate.dz/Dashboard/Users",
                 {
                     withCredentials: true,
                     validateStatus: () => true,

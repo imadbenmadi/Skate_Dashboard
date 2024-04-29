@@ -15,7 +15,7 @@ function Requests() {
         try {
             setLoading(true);
             const response = await axios.get(
-                "http://localhost:3000/Dashboard/Courses/Requests",
+                "https://backend.skate.dz/Dashboard/Courses/Requests",
                 {
                     withCredentials: true,
                     validateStatus: () => true,

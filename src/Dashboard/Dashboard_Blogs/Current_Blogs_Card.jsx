@@ -17,7 +17,7 @@ function Current_Blogs_Card({ item, onDelete }) {
     async function handle_delete_Blog(Blog) {
         try {
             const response = await axios.delete(
-                `http://localhost:3000/Dashboard/Blogs/${Blog._id}`,
+                `https://backend.skate.dz/Dashboard/Blogs/${Blog._id}`,
                 {
                     withCredentials: true,
                     validateStatus: () => true,
@@ -68,7 +68,7 @@ function Current_Blogs_Card({ item, onDelete }) {
                 <div className="relative overflow-hidden py-5 px-5 flex flex-col md:flex-row shrink-0 justify-start h-fit">
                     <img
                         className="md:w-[30%]  md:h-[200px] object-cover"
-                        src={`http://localhost:3000/Blogs/${item.Image}`}
+                        src={`https://backend.skate.dz/Blogs/${item.Image}`}
                         alt={item.Title}
                     />
                     <div className="md:w-[70%] md:pl-6 py-4 flex break-words">

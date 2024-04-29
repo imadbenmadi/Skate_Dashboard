@@ -103,7 +103,7 @@ function Edit() {
                         try {
                             setSubmitting(true);
                             let response = await Axios.put(
-                                "http://localhost:3000/Dashboard/Users",
+                                "https://backend.skate.dz/Dashboard/Users",
                                 values,
                                 {
                                     withCredentials: true,

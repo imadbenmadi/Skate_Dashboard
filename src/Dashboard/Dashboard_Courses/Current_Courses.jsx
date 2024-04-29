@@ -15,10 +15,13 @@ function Current_Courses() {
     const fetch_Courses = async () => {
         setLoading(true);
         try {
-            const response = await axios.get("http://localhost:3000/Courses", {
-                withCredentials: true,
-                validateStatus: () => true,
-            });
+            const response = await axios.get(
+                "https://backend.skate.dz/Courses",
+                {
+                    withCredentials: true,
+                    validateStatus: () => true,
+                }
+            );
             if (response.status == 200) {
                 setCourses(response.data.courses);
             } else {

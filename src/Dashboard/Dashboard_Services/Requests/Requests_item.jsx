@@ -4,8 +4,7 @@ import { useNavigate } from "react-router";
 import { Formate_Date_NoYear } from "../../../Logic/Formate_Date";
 import { useState } from "react";
 function Requests_item({ request, onDelete }) {
-    if (!request.Service)
-        return null
+    if (!request.Service) return null;
     const Navigate = useNavigate();
     const [Accept_Loading, setAccept_Loading] = useState(false);
     const [Reject_Loading, setReject_Loading] = useState(false);
@@ -13,7 +12,7 @@ function Requests_item({ request, onDelete }) {
         try {
             setAccept_Loading(true);
             const response = await axios.post(
-                "http://localhost:3000/Dashboard/Services/Requests/Accept",
+                "https://backend.skate.dz/Dashboard/Services/Requests/Accept",
                 { UserId, ServiceId },
                 {
                     withCredentials: true,
@@ -75,7 +74,7 @@ function Requests_item({ request, onDelete }) {
         try {
             setReject_Loading(true);
             const response = await axios.post(
-                "http://localhost:3000/Dashboard/Services/Requests/Reject",
+                "https://backend.skate.dz/Dashboard/Services/Requests/Reject",
                 { UserId, ServiceId },
                 {
                     withCredentials: true,
