@@ -59,18 +59,23 @@ function Add_Blog() {
                             formData.append("Description", values.Description);
                             formData.append("image", values.image);
                             let response = await Axios.post(
-                                "https://backend.skate.dz/Dashboard/Blogs",
+                                "http://localhost:3001/Dashboard/Blogs",
                                 formData,
                                 {
                                     withCredentials: true,
                                     validateStatus: () => true,
                                 }
                             );
+                            console.log("form data to be sent : ");
+                            for (const value of formData) {
+                                console.log(value);
+                            }
+                            console.log("response from the server : ", response);
                             if (response.status == 200) {
                                 resetForm();
                                 Swal.fire(
                                     "Done!",
-                                    "Blog has been created Successfully",
+                                    "Blog has been created successfully",
                                     "success"
                                 );
                             } else if (response.status == 404) {
